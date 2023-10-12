@@ -1,3 +1,7 @@
+"""
+Script to test the simple explicit NN on the MNIST dataset
+"""
+
 import pickle
 
 import numpy as np

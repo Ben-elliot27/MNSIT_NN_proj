@@ -10,7 +10,7 @@ import tensorflow as tf
 def make_model(modelDir, name, model, epochs):
     """
     Train a tf model on the MNIST data set and save it to a file, updating the list of saved models
-    :param modelDir: file directory model will be saved to
+    :param modelDir: file directory model will be saved to NOTE: this should be in NN_models for file management
     :param name: name of the model
     :param model_layers: tf.keras model of the
     :param epochs: Number of epochs to train for
