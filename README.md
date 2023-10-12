@@ -17,5 +17,5 @@ Neural networks and deep learning  Nielsen, Michael A
 To train a network use the netMaker script and function def make_model(modelDir, name, model, epochs).
 To load the UI for image testing run the image_test script.
 
-External Libraries: Tensorflow, Pickle, Numpy
+External Libraries: Tensorflow, Pickle, Numpy, PIL
 
