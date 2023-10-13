@@ -75,10 +75,14 @@ b1_2 = tk.Button(my_w, text='Get Summary of NN architecture',
                  command=lambda: setSummary(l1_2, clicked.get()))
 b1_2.pack()
 
-l1_2 = tk.Label(my_w, text="Summary of NN", font=my_font1)  # width?
+l1_2 = tk.Label(my_w, text="Summary of NN", font=('times', 15, 'bold'))  # width?
 l1_2.pack()
 
-l2 = tk.Label(my_w, text='Upload Files for ML recognition', font=my_font1)
+l_a = tk.Label(my_w, text="""------------------------------------------------------------------------------------------
+                          """, font=my_font1)
+l_a.pack()
+
+l2 = tk.Label(my_w, text='Upload Files for ML recognition', font=my_font1, )
 l2.pack()
 
 # Button to upload file
