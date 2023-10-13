@@ -1,4 +1,5 @@
 """
+checking
 A sample script for creating a tf model, train it on MNIST data and save it to the list of trained nets
 """
 
