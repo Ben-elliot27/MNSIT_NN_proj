@@ -1,6 +1,8 @@
 """
 ---------
 checking
+
+
 Python script to test a neural network and recognise a digit
 
 Provides a UI to test Neural networks using a sample image uploaded from the users computer.
@@ -13,6 +15,7 @@ Uses a 28x28 grayscale 255 image - can convert images from other formats and siz
 
 ---------
 """
+import os
 
 import pickle
 import tkinter as tk
