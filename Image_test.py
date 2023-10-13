@@ -1,6 +1,5 @@
 """
 ---------
-checking
 Python script to test a neural network and recognise a digit
 
 Provides a UI to test Neural networks using a sample image uploaded from the users computer.
