@@ -8,7 +8,7 @@ Use the netMaker script with make_model() function to create, train and save a m
 
 Also loads NET_simple a simple 3 layer sequential network
 
-Uses a 28x28 grascale 255 image - can convert images from other formats and sizes
+Uses a 28x28 grayscale 255 image - can convert images from other formats and sizes
 
 ---------
 """
