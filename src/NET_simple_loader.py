@@ -6,8 +6,8 @@ The weights and biases are pickle dumped to the files weights and biases
 
 import pickle
 
-import mnist_loader
-from NET_simple import Network
+from src import mnist_loader
+from src.NET_simple import Network
 
 SIZES = [784, 30, 10]
 training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
@@ -28,14 +28,14 @@ def record_weights(net):
     pickle.dump(biases, bf)
     bf.close()
 
-    sm = open("trainedNets", 'rb')
+    sm = open("./resources/trainedNets", 'rb')
     try:
         trainedNets = pickle.load(sm)
     except:
         trainedNets = []
     sm.close()
     if ['NONE', "Simple NN"] not in trainedNets:
-        sm = open("trainedNets", 'wb')
+        sm = open("./resources/trainedNets", 'wb')
         trainedNets.append(['NONE', "Simple NN"])
         pickle.dump(trainedNets, sm)
         sm.close()

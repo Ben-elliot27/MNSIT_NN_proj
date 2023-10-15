@@ -12,7 +12,6 @@ Uses a 28x28 grayscale 255 image - can convert images from other formats and siz
 
 ---------
 """
-import os
 
 import pickle
 import tkinter as tk
@@ -23,7 +22,7 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image, ImageTk
 
-from NET_simple import Network
+from src.NET_simple import Network
 
 SIZES = [784, 30, 10]
 
@@ -34,7 +33,7 @@ def getTrainedNets():
     :return:
     trainedNets: a 2D list [['dir', 'name], ...]]
     """
-    NN = open("trainedNets", 'rb')
+    NN = open("./resources/trainedNets", 'rb')
     try:
         trainedNets = pickle.load(NN)
     except:
@@ -178,7 +177,7 @@ def data_into_net_simple(img_data):
     net.weights = weights
     net.biases = biases
 
-    test_results = net.feedforward(img_data)  ## NOT WORKING
+    test_results = net.feedforward(img_data)
 
     return np.argmax(test_results)
 

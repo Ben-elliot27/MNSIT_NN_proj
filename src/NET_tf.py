@@ -9,7 +9,7 @@ import pickle
 import numpy as np
 import tensorflow as tf
 
-import mnist_loader
+from src import mnist_loader
 
 modelDir = "NN_models/SeqNet_784_128_drop02_10__5"
 
@@ -60,14 +60,14 @@ model_1.fit(x_train_1, y_train_1, epochs=5)
 model_1.save(modelDir)  # Save the tensorflow model to a file
 
 # Update list of models
-sm = open("trainedNets", 'rb')
+sm = open("./resources/trainedNets", 'rb')
 try:
     trainedNets = pickle.load(sm)
 except:
     trainedNets = []
 sm.close()
 if [modelDir, "Sequential TF Net"] not in trainedNets:
-    sm = open("trainedNets", 'wb')
+    sm = open("./resources/trainedNets", 'wb')
     trainedNets.append([modelDir, "Sequential TF Net"])
     pickle.dump(trainedNets, sm)
     sm.close()

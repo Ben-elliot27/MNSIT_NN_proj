@@ -7,8 +7,8 @@ import pickle
 import numpy as np
 from PIL import Image
 
-import mnist_loader
-from NET_simple import Network
+from src import mnist_loader
+from src.NET_simple import Network
 
 """
 Script to test the neural network on MNIST images

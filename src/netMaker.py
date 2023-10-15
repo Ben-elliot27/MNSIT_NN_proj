@@ -45,7 +45,7 @@ def make_model(modelDir, name, model, epochs):
 
 
 def check_name_file(name, modelDir):
-    fl = open("./trainedNets", "rb")
+    fl = open("./resources/trainedNets", "rb")
     net_data = pickle.load(fl)
     fl.close()
     for net in net_data:
@@ -64,14 +64,14 @@ def check_name_file(name, modelDir):
 
 def update_trained_list(modelDir, name):
     # Update list of models
-    fl = open("./trainedNets", 'rb')
+    fl = open("./resources/trainedNets", 'rb')
     try:
         trainedNets = pickle.load(fl)
     except:
         trainedNets = []
     fl.close()
     if [modelDir, name] not in trainedNets:
-        sm = open("./trainedNets", 'wb')
+        sm = open("./resources/trainedNets", 'wb')
         trainedNets.append([modelDir, name])
         pickle.dump(trainedNets, sm)
         sm.close()
